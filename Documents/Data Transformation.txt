@@ -1,0 +1,17 @@
+Converting categorical data into numbers with Pandas and Scikit-learn
+	http://fastml.com/converting-categorical-data-into-numbers-with-pandas-and-scikit-learn/
+
+One Hot Encoding in Scikit-Learn
+	http://www.ritchieng.com/machinelearning-one-hot-encoding/
+
+Practical Guide on Data Preprocessing in Python using Scikit Learn
+	https://www.analyticsvidhya.com/blog/2016/07/practical-guide-data-preprocessing-python-scikit-learn/
+
+Guide to Encoding Categorical Values in Python 
+	http://pbpython.com/categorical-encoding.html
+
+Paper: Clustering Mixed Numeric and Catergorical Data
+	https://arxiv.org/ftp/cs/papers/0509/0509011.pdf
+
+How to Deal with Mixed Data Types when Performing K-means Clustering 
+	http://simpledatamining.blogspot.com/2015/05/how-to-deal-with-mixed-data-types-when.html

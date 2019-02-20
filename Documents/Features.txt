@@ -1,0 +1,208 @@
+
+Policy Features
+	policy_n
+		integer // string
+		Policy Number
+	
+	po_issue_date
+		Date {MM/DD/YY} // datetime.date
+		Policy Issue Date
+	
+	PremiumPaidmethod
+		Character {A, B, C, P, S} // string
+		Payment Method
+	
+	medicalExam_required
+		Character {M, N} // string
+		Medical Exam Yes/No
+	
+	underwriting_decision
+		Character {A, C} // string
+		Accepted / Denied
+	
+	channel_code
+		Character {A} // string
+		An insurance company represents multiple channels
+	
+	lapse_date
+		Date { MM/DD/YY, Blanks} // datetime.date, bool
+		Lapsed Policy:
+		Definition: The policy for which all benefits to the policy holder cease and is terminated due to non payment of premium amount on the due date or even after the grace period is called a lapsed policy.
+
+	reinstatment_date	
+		Date { MM/DD/YY, Blanks} // datetime.date, bool
+		After cancelation, the date that a customer ask for comming back.
+
+	autopaiddate
+		Date {MM/DD/YY, Blanks} // datetime.date, bool
+		Automatic payment of Premium?
+
+	policyInforce_year
+		Date (YY) {13,14,15,16,17,18,19} // string
+		The duration of the policy, valid until 20XX
+	
+	PremiumPaidFrequencyPeryear
+		Integer {1,3,6,12} // string
+		12 - monthly, 6 - Bi-monthly?, 3 - every 4 months, 4 - quarterly, 1 - yearly
+	
+	face_amt
+		Integer // Integer
+		Face Amount:
+		Sum of money for which an insurance cover is obtained, usually shown on the top sheet (face) of the policy. In life insurance, face amount is the sum paid on the policy's maturity date, on the death of the insured,
+	
+	Total_prem 
+		Integer // Integer
+		Insurance Premium - Not Important - Charged by insurance company
+
+
+Claim
+	claim_rece_no
+		integer // string
+		Claim Receipt Number: ref. no. is given when you report a claim	
+
+	claim_no
+		Integer // string
+		When paid, the number is assigned (record to track the processed claim)
+
+	Claimappl_date
+		Date {MM/DD/YY} // datetime.date
+		Claim Application Date
+
+	claim_date_start
+		Date {MM/DD/YY} // datetime.date
+		Claim benefit start date
+
+	claim_date_end
+		Date {MM/DD/YY} //datetime.date
+		Claim benefit end date
+
+	claim_benef_days
+		Integer {0,1,2.....} Exception: 0 // integer
+		Difference between claim start date and end date 
+
+	amount
+		Integer // integer
+		The amount paid to the customer
+
+	process_date
+		Date {MM/DD/YY} datetime.date
+		The date claim processing started
+
+	docter_proof_date
+		Date {MM/DD/YY, Blanks} // datetime.date
+		the date that received a signature from a doctor
+
+Event
+	event_date
+		Date {MM/DD/YY} // datetime.date
+		The date when something happend
+
+	zip
+		Integer {0, 100, 103 ... } Exception: 0 // integer
+		zip code for the event
+
+	event_type
+		Integer {1,2} // string
+		Type of the event
+
+	
+Customer
+	insuredID
+		Integer {1,2,....}	// string
+		A person'd ID
+
+	Insured_sex
+		Integer {1,2, Blanks} // string
+		Gender
+
+	Insured_age
+		Integer {0 to 66}	// integer
+		Age
+
+	marriage
+		Integer {1,2,3,4,6, Blanks} // string
+		?
+
+	education
+		Integer {0,1,2,3,4,5,6, Blanks} // string
+		Category?
+
+	occupation_class
+		Integer {0,1,2,3,4,5,6, Blanks} // string
+		Category?	
+
+Agent
+	agentid
+		Integer // Integer
+		Sales Person ID
+
+	agentin_center
+		Integer // Integer
+		Office Center ID
+
+
+Treatment
+	
+	Visitation
+		visit reasons_type
+			Integer {1,2,3}	// string
+			reason to visit
+
+		ride_type
+			Integer {1.2}	// string
+			Emergency or normal
+
+	Hospital
+		hospital_dept_1	
+			Integer // string
+			Department number
+
+		hospital_dept_2
+			Integer {1,2.. Blanks} // string
+			Additional Information
+		
+		hospital_num
+			Integer   // string
+			Hospital ID
+
+		hosp_class  
+			Integer {1,2,3,4,6}  // integer
+
+
+	Surgery
+		
+		surgery_code (Insurer) 
+			Integer {1,2.. Blanks} // string
+
+		surgery_date
+			Date {MM/DD/YY}	// datetime.date
+			Surgery Date
+
+		major_Surgery	
+			Integer {1,2.. Blanks} // integer, Blank = 0
+			?
+
+		surgey_date_start
+			Date {MM/DD/YY}	// datetime.date
+			Surgery start date
+
+		surgery_date_end
+			Date {MM/DD/YY}	// datetime.date
+			Surgery end date
+
+	Doctor
+		doctor_num
+			integer   // Integer
+			ID of the doctor
+
+	Illness
+		diag_code
+			string   // string
+			Kind of illness
+
+
+		
+//left for later
+		medical_ind
+			Integer {0,1,2}
+			?
